@@ -21,7 +21,8 @@
     <div ng-controller="MyCntr">
         <div class="container">
             <div class="jumbotron">
-                <img src="covid19.jpg" class="img-circle d-block mx-auto mb-5" alt="Cinque Terre" width="200" height="200"> 
+                <img src="covid19.jpg" class="img-circle d-block mx-auto mb-5" alt="Cinque Terre" width="200"
+                    height="200">
 
                 <h4 class="text-center font-weight-bold ">Stay Home Stay Safe</h4>
                 <p>Coronavirus disease 2019 (COVID-19) is an infectious disease caused by severe acute respiratory
@@ -32,6 +33,7 @@
                     {{name}}
 
                 </p>
+                LastUpdate :<strong> {{Data.lastUpdate}}</strong>
                 <div class="row ">
                     <div class="card col-12 col-md-4 text-center bg-warning text-white my-2">
                         <div class="card-body ">
@@ -63,7 +65,7 @@
                     placeholder="Ex: india/america/japan/china for check covid update" ng-model="CountryName"
                     ng-change="CountryChange()">
                 <div class="container-fluid" ng-if="CountryData">
-                    <h4 class="card card-body text-uppercase text-center">{{CountryName}} Covid-19 Status</h4>
+                    <h4 class="card card-body text-uppercase text-center">{{CountryName}} Covid-19 Status <br><small class="mt-3">{{Data.lastUpdate}}</small></h4>
                     <div class="row">
                         <div class="card col-12 col-md-4 text-center bg-warning text-white my-2">
                             <div class="card-body ">
@@ -89,14 +91,10 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
-
-
             </div>
         </div>
-
     </div>
 
     <!-- Optional JavaScript -->
